@@ -14,10 +14,15 @@ public class Task_1_1 {
         }
         int inInt = Integer.parseInt(inString);
 
-/*        for (int i = 0; i <= inInt; i++) {
-            printResult(i);
-        }*/
-        Stream.iterate(1, n -> n + 1).limit(inInt).forEach((p)-> System.out.println(printResult(p)));
+        System.out.println("For");
+        for (int i = 0; i <= inInt; i++) {
+            System.out.println(printResult(i));
+        }
+
+        System.out.println("Stream");
+        Stream.iterate(1, n -> n + 1)
+                .limit(inInt)
+                .forEach((p)-> System.out.println(printResult(p)));
 
     }
     static String printResult(int inInt){
